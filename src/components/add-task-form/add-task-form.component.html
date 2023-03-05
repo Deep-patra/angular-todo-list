@@ -1,0 +1,60 @@
+<div class="relative w-screen h-screen overlay dark:text-customWhite">
+  <div class="absolute top-10 right-10 w-min" >
+    <button type="button" aria-label="close button" (click)="close()">
+      <mat-icon class="w-10 h-10">clear</mat-icon>
+    </button>
+  </div>
+
+
+  <form class="w-full flex flex-row items-center justify-center">
+    <div class="flex flex-col gap-5 rounded-md p-5 form-container">
+
+      <div class="w-full flex flex-row items-center justify-between">
+        <span class="text-lg">Add Task</span>
+      </div>
+
+      <div class="relative p-2 border border-solid border-gray-600 rounded-md">
+        <input type="text" class="w-full" [value]="title" placeholder="Title of the Task" (input)="handleTitleInput($event)"/>
+      </div>
+
+      <div class="relative p-2 border border-solid border-gray-600 rounded-md">
+        <textarea class="resize-none w-full" [value]="description" placeholder="Description" (input)="handleDescriptionInput($event)"></textarea>
+      </div>
+
+      <div class="p-2 flex flex-col items-start md:flex-row md:items-center gap-2">
+        <span>Task expires in </span>
+
+
+        <div class="p-2 flex flex-row items-center gap-2 rounded-md border border-solid border-gray-600">
+          <span>Date</span>
+          <input type="date" [value]="endDate" (change)="handleEndDateChange($event)" />
+        </div>
+
+        <div class="p-2 flex flex-row items-center gap-2 rounded-md border border-solid border-gray-600">
+          <span>Time</span>
+          <input type="time" [value]="endTime" (change)="handleEndTimeChange($event)" />
+        </div>
+
+        <span class="expire-help-wrapper relative text-inherit text-base md:text-lg">
+          <div class="expire-help z-30 p-2 absolute left-10 top-0 w-40 border border-solid rounded-md border-black dark:border-customWhite shadow-md">
+            <span class="text-sm">The task will be deleted when the end time is reached.</span>
+          </div>
+          <mat-icon class="dark:text-customWhite">help</mat-icon>
+        </span>
+      </div>
+
+      <div class="p-2 flex flex-row items-center gap-2">
+        <input type="checkbox" [checked]="notify" (change)="handleNotifyChange($event)" />
+        <span>notify me when the task expires.</span>
+      </div>
+
+      <div class="p-2 flex flex-row items-center justify-end">
+        <button type="button" class="p-2 px-3 border border-solid border-peterRiver text-peterRiver dark:border-customWhite dark:text-customWhite rounded-md hover:bg-peterRiver hover:text-customWhite hover:dark:bg-customWhite hover:dark:text-black" aria-label="add task to the list" (click)="handleAddButton($event)">
+          Add
+        </button>
+      </div>
+
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="w-full h-auto">
+
+  <ng-container *ngIf="tasks.length > 0">
+    <div class="relative task-grid-wrapper">
+      <app-task-item *ngFor="let task of tasks; let i = index" [task]="task" [index]="i" (onDelete)="deleteTask($event)" ></app-task-item>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="tasks.length === 0">
+    <div class="w-full flex flex-row items-center justify-center py-48 dark:text-customWhite">
+      <span class="text-lg">No Tasks are added.</span>
+    </div>
+  </ng-container>
+
+</div>

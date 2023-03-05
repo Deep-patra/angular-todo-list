@@ -1,0 +1,43 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  scale: 1;
+  animation: appear 0.3s ease-in-out forwards;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: min(600px , 80%);
+}
+
+.expire-help {
+  display: none;
+  backdrop-filter: blur(10px);
+}
+
+.expire-help-wrapper:hover .expire-help {
+  display: block;
+  animation: appear 0.1s linear forwards;
+}
+
+@keyframes appear {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}

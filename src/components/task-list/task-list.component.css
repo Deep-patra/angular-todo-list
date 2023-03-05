@@ -1,0 +1,31 @@
+.task-grid-wrapper {
+  display: grid;
+  padding: 20px;
+  padding-top: 50px;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.task-flex-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .task-grid-wrapper {
+    grid-template-columns: repeat(auto-fill, 28vw);
+    place-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .task-grid-wrapper {
+    padding: 5px;
+    padding-top: 50px;
+    grid-template-columns: repeat(auto-fill, 150px);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+}

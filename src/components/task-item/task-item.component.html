@@ -1,0 +1,26 @@
+<div class="task-item min-w-0 max-w-[200px] flex flex-col justify-between gap-5 p-2 md:p-5 border border-solid border-gray-300 rounded-lg duration-300 transition-all hover:shadow-md dark:border-none dark:bg-darkCardBackground">
+
+  <div class="flex flex-col gap-4">
+    <div>
+      <span class="text-peterRiver text-lg md:text-xl">{{ task?.title }}</span>
+    </div>
+
+    <div class="max-h-40 overflow-hidden">
+      <span class="description text-gray-500 text-sm block md:text-base">{{ task?.description }}</span>
+    </div>
+  </div>
+
+  <div class="flex flex-row items-center justify-between gap-2 w-full">
+    <div class="flex flex-row items-center gap-2">
+      <mat-icon class="w-5 h-5 text-gray-400">date_range</mat-icon>
+      <span class="text-sm text-gray-400">{{ task?.endDate?.toDateString() }}</span>
+    </div>
+
+    <div>
+      <button class="text-sm text-gray-400 hover:text-red-500" type="button" aria-label="Delete Button" (click)="handleDelete()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </div>
+
+</div>

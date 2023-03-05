@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.2s linear;
+}
+
+:root {
+  --light-body-background: #f5f6fa;
+
+  --dark-body-background: #2f3640;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  background-color: var(--light-body-background);
+}
+
+input {
+  background-color: transparent;
+}
+
+input[type="text"], textarea, a, input[type="text"]:focus, textarea:focus {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+input[type="text"]::placeholder, textarea::placeholder {
+  color: gray;
+}
+
+input[type="date"]:focus, input[type="time"]:focus {
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.dark body {
+  background-color: var(--dark-body-background);
+}

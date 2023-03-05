@@ -1,0 +1,12 @@
+<div class="hidden md:flex w-full flex-row items-center justify-end p-3">
+  <button type="button" aria-label="Add Task" class="add-task-but bg-peterRiver text-white rounded-md flex flex-row items-center border border-solid border-peterRiver gap-2 p-2 px-3 transition-colors hover:bg-transparent hover:text-peterRiver" (click)="addTask()">
+    <mat-icon class="w-8 h-8">add</mat-icon>
+    <span class="text-lg">Add Task</span>
+  </button>
+</div>
+
+<div class="fab fixed bottom-10 right-10 z-10 rounded-full flex flex-row items-center justify-center md:hidden">
+  <button type="button" aria-label="Add Task" class="p-2 flex flex-row items-center justify-center" (click)="addTask()">
+    <mat-icon class="w-10 h-10 text-peterRiver">add</mat-icon>
+  </button>
+</div>

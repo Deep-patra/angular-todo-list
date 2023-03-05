@@ -1,0 +1,12 @@
+.task-item {
+  aspect-ratio: calc(200 / 300);
+}
+
+.description {
+  -webkit-line-clamp: 10;
+}
+
+.task-item:hover {
+  translate: 0px -5px;
+  scale: 1.02;
+}
